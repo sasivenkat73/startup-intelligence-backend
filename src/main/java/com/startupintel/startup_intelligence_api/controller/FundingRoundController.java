@@ -12,8 +12,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
-public class FundingRoundController {
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://startup-intelligence-app.vercel.app"
+	    }
+	)public class FundingRoundController {
 
 	private final FundingRoundRepository repository;
 	private final FundingRoundService service;

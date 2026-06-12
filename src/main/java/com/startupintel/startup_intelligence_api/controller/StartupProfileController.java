@@ -12,8 +12,12 @@ import com.startupintel.startup_intelligence_api.service.StartupProfileService;
 
 @RestController
 @RequestMapping("/api/startups")
-@CrossOrigin(origins = "http://localhost:5173")
-public class StartupProfileController {
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://startup-intelligence-app.vercel.app"
+	    }
+	)public class StartupProfileController {
 
 	@Autowired
 	StartupProfileService service;

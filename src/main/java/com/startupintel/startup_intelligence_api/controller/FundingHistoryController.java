@@ -9,8 +9,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/funding-history")
-@CrossOrigin(origins = "http://localhost:5173")
-public class FundingHistoryController {
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://startup-intelligence-app.vercel.app"
+	    }
+	)public class FundingHistoryController {
 
 	private final FundingHistoryService service;
 

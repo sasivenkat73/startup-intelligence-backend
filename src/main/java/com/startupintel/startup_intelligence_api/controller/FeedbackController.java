@@ -13,8 +13,12 @@ import com.startupintel.startup_intelligence_api.service.FeedbackService;
 
 @RestController
 @RequestMapping("/api/feedback")
-@CrossOrigin(origins = "http://localhost:5173")
-public class FeedbackController {
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://startup-intelligence-app.vercel.app"
+	    }
+	)public class FeedbackController {
 
 	@Autowired
 	FeedbackService service;

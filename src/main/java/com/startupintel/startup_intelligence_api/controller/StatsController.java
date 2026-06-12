@@ -10,9 +10,12 @@ import com.startupintel.startup_intelligence_api.repository.FundingRoundReposito
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
-public class StatsController {
-
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://startup-intelligence-app.vercel.app"
+	    }
+	)public class StatsController {
 	
 	private final FundingRoundRepository fundingRoundRepository;
 	
